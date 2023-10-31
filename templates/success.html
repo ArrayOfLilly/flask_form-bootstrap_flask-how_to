@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Success{% endblock %}
+{% block styling %}
+{{ super() }}
+h1 {
+font-family: 'American TypeWriter';
+font-weight: 400;
+padding: 50px;
+}
+img {
+padding-left: 50px;
+}
+{% endblock %}
+{% block content %}
+<h1>Top Secret </h1>
+<img src="{{ url_for('static', filename='/img/monkeys polaroid.gif') }}" alt="joy">
+{% endblock %}

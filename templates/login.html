@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% from 'bootstrap5/form.html' import render_form %}
+{% block title %}Login{% endblock %}
+{% block styling %}
+{{ super() }}
+h1 {
+font-family: 'American TypeWriter';
+font-weight: 400;
+padding: 50px 0;
+}
+img {
+padding-left: 50px;
+}
+{% endblock %}
+{% block content %}
+<div class="container">
+    <h1>Login</h1>
+
+    <!-- MANUALLY WRITTEN FORM -->
+    <!--         <form method="POST" action="{{ url_for('login') }}" novalidate> -->
+    <!--             {{ form.csrf_token }} -->
+
+    <!--             <p> {{ form.email.label }} <br> {{ form.email(size=30) }}</p> -->
+
+    <!--             {% for err in form.email.errors %} -->
+    <!--                 <p><span style="color: #DD114A">{{ err }}</span></p> -->
+    <!--             {% endfor %} -->
+
+    <!--             <p> {{ form.password.label }} <br> {{ form.password(size=30) }}</p> -->
+
+    <!--             {% for err in form.password.errors %} -->
+    <!--                 <p><span style="color: #DD114A">{{ err }}</span></p> -->
+    <!--             {% endfor %} -->
+    <!--             <button class="btn btn-dark btn-md" type="submit">Log in</button> -->
+    <!--         </form> -->
+
+    <!-- Bootstrap-Flask Generated Form -->
+    <div class="row">
+        <div class="col-4">
+            {{ render_form(form) }}
+        </div>
+    </div>
+
+</div>
+{% endblock %}
+
+
+

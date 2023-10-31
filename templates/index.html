@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block title %}Secrets{% endblock %}
+{% block styling %}
+{{ super() }}
+h1 {
+font-family: 'American TypeWriter';
+font-weight: 400;
+padding: 50px 0;
+}
+a.btn {
+margin-top: 20px;
+padding: 10px 50px;
+}
+span.click {
+font-family: 'American TypeWriter';
+font-size: 1.5em;
+font-weight: 400;
+}
+img {
+width: 100%;
+border:  10px solid white;
+border-radius: 5%;
+box-shadow: 9px 9px 15px #999999;
+}
+{% endblock %}
+{% block content %}
+<div class="jumbotron">
+    <div class="container">
+        <h1>Welcome</h1>
+        <div class="row">
+            <div class="col-4">
+                <img src="{{ url_for('static', filename='/img/welcome.jpeg') }}" alt="joy">
+                <hr>
+                <p>Are you ready to discover my secret?</p>
+                <p><span class="click">Click to discover!</span></p>
+                <a class="btn btn-dark btn-md" href=" {{ url_for('login') }} ">Login</a>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+{% endblock %}
